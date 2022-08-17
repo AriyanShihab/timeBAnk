@@ -21,12 +21,18 @@
         };
     </script>
     <main>
-        <div class="container grid place-items-center min-h-screen">
-            <a href="./markup/mainPage.html" id="pageRedirect" class="py-2 px-5 font-semibold bg-green-600 rounded">
-          Go To Main Page
-        </a>
+        <div class="container flex flex-col justify-center items-center gap-4 bg-gray-700 p-4 min-h-screen">
+            <span class="text-3xl text-green-500 font-bold">Type <span class="text-red-400">I'm a Robot</span> to proveb that, you are not an robot
+            </span>
+            <br />
+            <div>
+                <input class="px-3 py-2 bg-green-200 text-gray-800 rounded border-none outline-none" type="text " id="robot" />
+                <a id="loginBtn" class="bg-green-500 text-gray-700 px-3 py-2 rounded font-bold pointer-events-none opacity-5" href="./markup/mainPage.html ">Go To Main Page</a
+          >
         </div>
+      </div>
     </main>
-</body>
-
+    <script src="./js/commonFunctions.js"></script>
+    <script src="./js/homePageValidation.js"></script>
+  </body>
 </html>

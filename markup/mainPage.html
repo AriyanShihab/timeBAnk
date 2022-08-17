@@ -23,14 +23,16 @@
     <main>
         <!-- for instruction -->
         <div class="container mt-20 p-4">
-            <p class="p-3 border rounded text-center">This is for Instruction</p>
+            <p class="p-3 border rounded text-center bg-gray-600 text-white md:w-3/4 mx-auto font-semibold">
+                if you studey for 5 min, you will get 1min to spend in social media; so be carefull
+            </p>
         </div>
     </main>
     <!-- main content -->
     <main>
-        <div class="container md:w-3/4 mx-auto p-4 my-10">
-            <div class="grid grid-cols-3 gap-4">
-                <div class="p-4 rounded bg-blue-500">
+        <div class="container xl:w-3/4 mx-auto p-4 my-10">
+            <div class="grid md:grid-cols-3 grid-cols-1 gap-4">
+                <div class="p-4 rounded bg-blue-500 overflow-x-scroll">
                     <h1 class="text-white text-2xl font-semibold">
                         Time You have spend for learning something!
                     </h1>
@@ -38,7 +40,7 @@
                         <span id="studyingTime">00</span> min
                     </h1>
                 </div>
-                <div class="p-4 rounded bg-amber-500">
+                <div class="p-4 rounded bg-amber-500 overflow-x-scroll">
                     <h1 class="text-white text-2xl font-semibold">
                         The time currently you have for spend On Social Media
                     </h1>
@@ -46,30 +48,28 @@
                         <span id="remainingTime">00</span> min
                     </h1>
                 </div>
-                <div class="p-4 rounded bg-red-500">
+                <div class="p-4 rounded bg-red-500 overflow-x-scroll">
                     <h1 class="text-white text-2xl font-semibold">
                         The Time you have been already used for social use
                     </h1>
-                    <h1 id="usedTime" class="text-4xl text-white font-bold my-3">
-                        120
-                    </h1>
+                    <h1 id="usedTime" class="text-4xl text-white font-bold my-3">00</h1>
                 </div>
             </div>
         </div>
     </main>
     <!-- taking input -->
     <main>
-        <div class="container md:w-3/4 mx-auto p-4 my-10">
-            <div class="grid grid-cols-2 gap-4">
+        <div class="container xl:w-3/4 mx-auto p-4 my-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="bg-green-500 p-4 rounded">
-                    <input type="number" min="0" id="learningTime" placeholder="Your Learning Time" class="block w-3/4 p-2 bg-white text-gray-800 rounded my-3" />
+                    <input type="number" min="0" id="learningTime" placeholder="Amount of time you spend for learn something" class="block w-3/4 p-2 bg-white text-gray-800 rounded my-3" />
                     <button id="learningTimeButton" class="px-3 py-3 rounded bg-gray-700 text-blue-300 font-semibold">
               Studey Time
             </button>
                 </div>
 
-                <div class="bg-green-500 p-4 rounded">
-                    <input type="number" min="0" id="learningTime" placeholder=" Add Your Learning Time" class="block w-3/4 p-2 bg-white text-gray-800 rounded my-3" />
+                <div class="bg-green-500 p-4 rounded opacity-75" id="socialParent">
+                    <input disabled type="number" min="0" id="socialTime" placeholder="Amount of time you spend in social media" class="block w-3/4 p-2 bg-white text-gray-800 rounded my-3" />
                     <button id="socialTimeButton" class="px-3 py-3 rounded bg-gray-700 text-blue-300 font-semibold">
               Social Media Time
             </button>

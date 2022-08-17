@@ -11,13 +11,13 @@ function inputFeildToNumber(fieldName) {
 
     if (feildInString === "") {
         alert("you have to inseart atleat a single value");
-        return;
+        return undefined;
     }
 
     const feildInNumber = parseFloat(feildInString);
     if (feildInNumber <= 0) {
         alert("Please enter a number that greater than zero");
-        return;
+        return undefined;
     }
 
     return feildInNumber;
@@ -35,9 +35,15 @@ function innerTextToNumber(elementID) {
 
 // setting up value of an elemenrt
 
-function setValue(whereToSet, WhatToSet) {
+function setValue(whereToSet, WhatToSet, type = "plus") {
     const where = getByID(whereToSet);
     const previousValue = innerTextToNumber(whereToSet);
-
-    where.innerText = previousValue + WhatToSet;
+    const WhatToSetInNumber = parseFloat(WhatToSet);
+    if (type == "minus") {
+        where.innerText = previousValue - WhatToSetInNumber;
+        return;
+    }
+    where.innerText = previousValue + WhatToSetInNumber;
 }
+
+function setSubStackValue(whereToSet, WhatToSet) {}
