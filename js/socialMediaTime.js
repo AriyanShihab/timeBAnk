@@ -16,5 +16,5 @@ socialTimeButton.addEventListener("click", function() {
     }
     setValue("usedTime", socialMediaTime);
 
-    setValue("remainingTime", remainingTime, "minus");
+    setValue("remainingTime", socialMediaTime, "minus");
 });

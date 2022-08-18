@@ -41,6 +41,7 @@ function setValue(whereToSet, WhatToSet, type = "plus") {
     const WhatToSetInNumber = parseFloat(WhatToSet);
     if (type == "minus") {
         where.innerText = previousValue - WhatToSetInNumber;
+        console.log(previousValue, WhatToSetInNumber);
         return;
     }
     where.innerText = previousValue + WhatToSetInNumber;
